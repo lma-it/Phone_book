@@ -291,6 +291,13 @@ def restore_deleted_contacts(deleted_contacts, phone_book):
 
 
 def copy_contact(phone_book, copy_contacts):
+    '''
+    Функция которая позволяет копировать контакты или контакт в отдельный файл.
+
+    Args:
+        phone_book: Список всех контактов 
+        copy_contacts: Список копирванных контактов.
+    '''
     still_copy = True
     isShow = True
     while still_copy == True:
