@@ -4,6 +4,8 @@
 # 3. Пользователь может ввести одну из характеристик для поиска определенной записи (Например фамилия, имя или номер телефона)
 # 4. Использование функций чтоб программа не была линейной, а содержала меню.
 
+# ДЗ. 
+
 import ast
 
 still_work = True
@@ -30,6 +32,10 @@ deleted_contacts = []
 '''
 Список для временного хранения удаленных контактов.
 '''
+copy_contacts = []
+'''
+Список для хранения экспортированных контактов
+'''
 
 
 def menu(phone_book, deleted_contacts):
@@ -51,7 +57,8 @@ def menu(phone_book, deleted_contacts):
     print("8. Enter 8 if you want DELETE the contact.")
     if len(deleted_contacts) > 0:
         print("0. Enter 0 if you want RESTORE deleted contact.")
-    option = int(input("9. Enter 9 if you want exit programm. Enter number of your choise: "))
+    print("9. Enter 9 if you want export contacts in new file.")
+    option = int(input("10. Enter 10 if you want exit programm. Enter number of your choise: "))
     
     if option == 1:
         return get_contact_by_name(phone_book)
@@ -71,7 +78,9 @@ def menu(phone_book, deleted_contacts):
         return delete_contact(phone_book, deleted_contacts)
     elif option == 0:
         return restore_deleted_contacts(deleted_contacts, phone_book)
-    elif option == 9:  
+    elif option == 9:
+        return copy_contact(phone_book, copy_contacts)
+    elif option == 10:  
         still_work = False
     
 
@@ -118,7 +127,7 @@ def load_contacs(file, phone_book):
         file: Путь к файлу, из которого идет чтение контактов
         phone_book: Список всех контактов в котором храняться словари с контактами
     '''
-    data = open(file, 'r')
+    data = open(file, 'r', encoding="UTF-8")
     if data != None:
         for line in data:
             contact = ast.literal_eval(line)
@@ -279,6 +288,47 @@ def restore_deleted_contacts(deleted_contacts, phone_book):
                 index += 1
                 continue
         index += 1
+
+
+def copy_contact(phone_book, copy_contacts):
+    still_copy = True
+    isShow = True
+    while still_copy == True:
+        index = 1
+        if isShow:
+            print("That is all of yours contacts: ")
+            for contact in phone_book:
+                print(f"{index}. {contact['Surname']} {contact['Name']} {contact['Second name']} {contact['phone']}")
+                index += 1
+        index = int(input("Enter number of contact wich you want to export in file: "))
+        copy_contacts.append(phone_book[index - 1])
+        answer = input("Do you want continue export? Enter 'y' if Yes, or 'n' if No: ")
+        if answer == 'y':
+            show_again = input("Do you want see all of your contacts again? Enter 'y' if Yes, or 'n' if No: ")
+            if show_again == 'y':
+                index = 1
+                if isShow == True:
+                    isShow = False
+                else:
+                    isShow = True
+                for contact in phone_book:
+                    print(f"{index}. {contact['Surname']} {contact['Name']} {contact['Second name']} {contact['phone']}")
+                    index += 1
+            elif show_again == 'n':
+                isShow = False
+                continue
+        elif answer == 'n':
+            still_copy = False
+            if len(copy_contacts) == 1:
+                data = open(f"{copy_contacts[0]['Name']}_{copy_contacts[0]['Surname']}.txt", 'a', encoding="UTF-8")
+                for contact in copy_contacts:
+                    data.write(str(contact) + '\n')
+                data.close()
+            else:
+                data = open("copy_of_contacts.txt", 'a', encoding="UTF-8")
+                for contact in copy_contacts:
+                    data.write(str(contact) + '\n')
+                data.close()
 
 
 # PROGRAMM BLOCK
