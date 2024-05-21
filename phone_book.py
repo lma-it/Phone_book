@@ -205,7 +205,7 @@ def save_file(phone_book, file):
 
         file: Путь к файлу, в который необходимо сохранить контакты.
     '''
-    data = open(file, 'w')
+    data = open(file, 'w', encoding="UTF-8")
     for contact in phone_book:
         data.write(str(contact) + '\n')
     data.close()

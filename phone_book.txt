@@ -1,7 +1,6 @@
-{'Name': 'Èãîðü', 'Surname': 'Ëàðèîíîâ', 'Second name': '', 'phone': '9576587525'}
-{'Name': 'Jane', 'Surname': 'Pattison', 'Second name': 'Willington', 'phone': '968785725'}
 {'Name': 'Kate', 'Surname': 'Williams', 'Second name': '', 'phone': '96752768252'}
-{'Name': 'Þðèé', 'Surname': 'Âèêòîðîâ', 'Second name': 'Ñåðãååâè÷', 'phone': '9784768376'}
 {'Name': 'Sean', 'Surname': 'Loreonof', 'Second name': '', 'phone': '9768476838'}
-{'Name': 'Âëàäèìèð', 'Surname': 'Ñëåïîâ', 'Second name': 'Þðüåâè÷', 'phone': '8685938683'}
 {'Name': 'John', 'Surname': 'Johnson', 'Second name': '', 'phone': '94867287591'}
+{'Name': 'Fillip', 'Surname': 'Kunis', 'Second name': '', 'phone': '9586797624'}
+{'Name': 'Jane', 'Surname': 'Pattison', 'Second name': 'Willington', 'phone': '968785725'}
+{'Name': 'Игорь', 'Surname': 'Ларионов', 'Second name': '', 'phone': '9596820626'}
