@@ -1,9 +1,7 @@
-{'Name': 'Михаил', 'Surname': 'Лубенцов', 'Second name': 'Александрович', 'phone': '998909442749'}
-{'Name': 'Игорь', 'Surname': 'Ларионов', 'Second name': '', 'phone': '9576587525'}
+{'Name': 'Г€ГЈГ®Г°Гј', 'Surname': 'Г‹Г Г°ГЁГ®Г­Г®Гў', 'Second name': '', 'phone': '9576587525'}
 {'Name': 'Jane', 'Surname': 'Pattison', 'Second name': 'Willington', 'phone': '968785725'}
-{'Name': 'Екатерина', 'Surname': 'Рассказова', 'Second name': 'Евгеньевна', 'phone': '998901673946'}
 {'Name': 'Kate', 'Surname': 'Williams', 'Second name': '', 'phone': '96752768252'}
-{'Name': 'Юрий', 'Surname': 'Викторов', 'Second name': 'Сергеевич', 'phone': '9784768376'}
+{'Name': 'ГћГ°ГЁГ©', 'Surname': 'Г‚ГЁГЄГІГ®Г°Г®Гў', 'Second name': 'Г‘ГҐГ°ГЈГҐГҐГўГЁГ·', 'phone': '9784768376'}
 {'Name': 'Sean', 'Surname': 'Loreonof', 'Second name': '', 'phone': '9768476838'}
-{'Name': 'Владимир', 'Surname': 'Слепов', 'Second name': 'Юрьевич', 'phone': '8685938683'}
+{'Name': 'Г‚Г«Г Г¤ГЁГ¬ГЁГ°', 'Surname': 'Г‘Г«ГҐГЇГ®Гў', 'Second name': 'ГћГ°ГјГҐГўГЁГ·', 'phone': '8685938683'}
 {'Name': 'John', 'Surname': 'Johnson', 'Second name': '', 'phone': '94867287591'}
